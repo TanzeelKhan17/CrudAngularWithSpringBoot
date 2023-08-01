@@ -24,4 +24,12 @@ getEmployeeById(){
     this.empl=data})
 }
 
+updateEmployee(id?:number){
+  console.log(id)
+this.empservice.updateEmployeById(this.empl).subscribe();
+this.router.navigate(['allemp']);
+//window.location.reload();
+}
+
+
 }

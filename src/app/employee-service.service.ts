@@ -43,5 +43,22 @@ export class EmployeeServiceService {
     return this.httpclient.get<Employee>(`${this.getId}/get/${this.id}`)
   }
 
+  updateEmployeById(employee?:Employee):Observable<Employee>{
+     return this.httpclient.put<Employee>(`${this.getId}/upd/${this.id}`,employee)
+  }
+
+  // Delete
+
+  // DeleteEmployee({ id }: { id?: number; } = {}):Observable(Employee){
+  //   return this.httpclient.delete<Employee>(`${this.getId}/del/${id}`)
+  // }
+
+  
+  deleteEmployee(id?:number):Observable<Employee>{
+    return this.httpclient.delete<Employee>(`${this.getId}/del/${id}`)
+ }
+
+
+
 
 }

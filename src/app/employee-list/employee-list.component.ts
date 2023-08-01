@@ -15,6 +15,13 @@ export class EmployeeListComponent implements OnInit {
 
   employee ?: Employee[];
 
+  deleteEmployee(id?:number){
+    this.employeeservice.deleteEmployee(id).subscribe();
+    this.route.navigate(['allemp']);
+   // window.location.reload();
+  
+  }
+
 
   updateEmployee(id?: number){
     this.employeeservice.get(id);
@@ -49,6 +56,8 @@ ngOnInit(): void {
   // }];
   this.employeeservice.getAllEmployee().subscribe((data:Employee[])=>{
     this.employee=data;
+    //window.location.reload();
+    this.deleteEmployee();
   })
 }
 

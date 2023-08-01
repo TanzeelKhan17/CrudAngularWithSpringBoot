@@ -38,7 +38,7 @@
                 id="emailId" placeholder="Enter email" [(ngModel)]="empl.emailId" >
               </div>
               
-              <button type="submit"    class="btn btn-primary btn-block">Register</button>
+              <button type="submit" (click)="updateEmployee(empl.id)"    class="btn btn-primary btn-block">Update</button>
             </form>
             <!-- End of Registration Form -->
           </div>

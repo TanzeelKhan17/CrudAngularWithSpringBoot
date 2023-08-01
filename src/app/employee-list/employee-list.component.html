@@ -9,6 +9,8 @@
         <th scope="col">Last Name</th>
         <th scope="col">Email</th>
         <th scope="col">Update</th>
+        <th scope="col">Delete</th>
+
 
       </tr>
     </thead>
@@ -20,6 +22,8 @@
         <td>{{emp.emailId}}</td>
         <td><button type="button" class="btn btn-success" (click)="updateEmployee(emp.id)" >Update</button>
           ></td>
+          <td><button type="button" class="btn btn-danger" (click)="deleteEmployee(emp.id)" >Delete</button>
+            ></td>
       </tr>
       
      
